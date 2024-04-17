@@ -4,7 +4,7 @@
 
 #!markdown
 
-Certainly! Let's explore the differences between a **tree** and a **commit** in **Git**:
+What is the differences between a **tree** and a **commit** in **Git**:
 
 1. **Tree**:
     - A **tree** is a fundamental Git object that represents the **directory structure** within a repository.
