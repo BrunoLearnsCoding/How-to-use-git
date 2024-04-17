@@ -1,0 +1,42 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"languageName":"csharp","name":"csharp"}]}}
+
+#!markdown
+
+Certainly! Let's explore the differences between a **tree** and a **commit** in **Git**:
+
+1. **Tree**:
+    - A **tree** is a fundamental Git object that represents the **directory structure** within a repository.
+    - It links together a set of **blobs** (which contain the actual file content) with their corresponding **names**, **permissions**, and **paths**.
+    - Think of a tree as a snapshot of a specific directory state at a particular point in time.
+    - Trees are essential for organizing files and directories within the repository.
+
+2. **Commit**:
+    - A **commit** is another type of Git object that serves as a **snapshot** of your project at a certain moment.
+    - A commit consists of several components:
+        - **Root Tree**: The tree that represents the entire directory structure of the project at that point.
+        - **Author**: Information about who made the commit.
+        - **Committer**: Information about who committed the changes.
+        - **Timestamps**: When the commit was made.
+        - **Commit Message**: A description of the changes made in the commit.
+        - **Commit Parents**: References to one or more previous commits (except for the initial/root commit).
+    - Commits allow Git to track the history of changes and provide a way to navigate through different versions of your project.
+
+3. **Relationship**:
+    - A commit object **references** a tree. It associates metadata (such as author, committer, timestamps) with that tree.
+    - Multiple commit objects can reference the **same tree** if the state of files in each commit is identical.
+    - When you run `git ls-tree` on a commit SHA, it automatically uses the tree SHA referenced by that commit.
+
+In summary, while a **tree** links blobs with their names and permissions, a **commit** connects a root tree with additional metadata, effectively creating a snapshot of your project at a specific time. 🌳📂🔍
+
+References:
+1. [Stack Overflow](https://stackoverflow.com/questions/5242846/what-is-the-difference-between-a-tree-and-commit-type-in-git) ¹
+2. [Initial Commit](https://initialcommit.com/blog/what-is-a-tree-in-git) ²
+3. [Git Documentation](https://git-scm.com/docs/git-commit-tree/2.18.0) ³
+
+Source: Conversation with Bing, 4/17/2024
+(1) What is the difference between a tree and commit type in Git?. https://stackoverflow.com/questions/5242846/what-is-the-difference-between-a-tree-and-commit-type-in-git.
+(2) What is a tree in Git? - Initial Commit. https://initialcommit.com/blog/what-is-a-tree-in-git.
+(3) Git - git-commit-tree Documentation. https://git-scm.com/docs/git-commit-tree/2.18.0.
+(4) Git - git-commit-tree Documentation. https://git-scm.com/docs/git-commit-tree.
