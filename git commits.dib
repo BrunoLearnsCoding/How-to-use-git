@@ -1,0 +1,42 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"languageName":"csharp","name":"csharp"}]}}
+
+#!markdown
+
+# Git Merges
+
+Merge is a very important concept in git. Different situations could lead to a different type of merge :
+
+
+There are different merge strategies which are selected by git according to the situation in which the merge occures.
+
+Certainly! When merging branches in Git, you can choose from various strategies based on your project's needs. Here are some common Git merge strategies:
+
+1. **Fast Forward Merge (FF)**:
+   - Used when merging a branch into another branch.
+   - If the target branch has no new commits since the source branch was created, Git performs a fast-forward merge.
+   - The commit history remains linear.
+   - Suitable for simple scenarios where no conflicts arise.
+
+2. **Recursive Merge (ORT)**:
+   - Default strategy for pulling or merging one branch.
+   - Resolves two heads using a 3-way merge algorithm.
+   - Creates a merged tree of common ancestors and uses it as the reference tree.
+   - Detects and handles merges involving renames.
+   - Can be customized with options like `-X ours` (favoring our version) or `-X theirs` (favoring their version).
+
+3. **Resolve Merge**:
+   - Uses a 3-way merge algorithm to combine changes from both branches.
+   - Requires manual conflict resolution if changes overlap.
+   - Suitable for straightforward merges.
+
+4. **Octopus Merge**:
+   - Merges more than two branches simultaneously.
+   - Rarely used due to complexity and potential conflicts.
+
+5. **Subtree Merge**:
+   - Combines changes from a subdirectory of one branch into another.
+   - Useful for managing external dependencies.
+
+Choose the strategy that best fits your project's requirements and workflow¹²⁴.
